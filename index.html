@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gottlieb Daimler Stadtführungen Schorndorf | Walter Leppert</title>
+  <meta name="description" content="Erleben Sie Schorndorf auf den Spuren von Gottlieb Daimler. Lebendige historische Führungen im Gehrock mit Stadtführer Walter Leppert.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Inter & Cormorant Garamond -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['"Cormorant Garamond"', 'serif'],
+          },
+          colors: {
+            brand: {
+              cream: '#FAF7F2',
+              sand: '#F2ECE1',
+              light: '#FFFFFF',
+              dark: '#1C232B',
+              navy: '#132B45',
+              bronze: '#A67336',
+              bronzeHover: '#8C5E28',
+              muted: '#667085'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Sanfte Übergänge & Lichteffekte */
+    .hero-gradient {
+      background: linear-gradient(135deg, rgba(250, 247, 242, 0.96) 0%, rgba(242, 236, 225, 0.88) 100%);
+    }
+    .card-shadow {
+      box-shadow: 0 10px 30px -10px rgba(19, 43, 69, 0.08);
+    }
+    .bronze-glow:hover {
+      box-shadow: 0 10px 25px -5px rgba(166, 115, 54, 0.3);
+    }
+  </style>
+</head>
+
+<body class="bg-brand-cream text-brand-dark font-sans antialiased selection:bg-brand-bronze selection:text-white">
+
+  <!-- WICHTIGER BUCHUNGSHINWEIS OBEN -->
+  <div class="bg-brand-navy text-white text-xs sm:text-sm py-2.5 px-4 text-center border-b border-brand-bronze/30">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-3">
+      <span class="inline-flex items-center gap-1.5 font-medium">
+        <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+        </svg>
+        Offizielle Buchungen:
+      </span>
+      <span>Termine und Buchungen laufen ausschließlich über die Tourist-Information Schorndorf.</span>
+      <a href="https://www.schorndorf.de/de/freizeit-tourismus/fuehrungen-erlebnisse/stadtfuehrungen/auf-den-spuren-von-gottlieb-daimler" 
+         target="_blank" rel="noopener noreferrer" 
+         class="underline hover:text-amber-300 font-semibold transition-colors ml-1">
+        Hier direkt anfragen &rarr;
+      </a>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-stone-200/80 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Logo / Titel -->
+      <a href="#start" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-full bg-brand-navy flex items-center justify-center text-brand-bronze font-serif font-bold text-xl border border-brand-bronze/30 shadow-sm group-hover:scale-105 transition-transform">
+          GD
+        </div>
+        <div class="flex flex-col">
+          <span class="font-serif font-bold text-lg sm:text-xl text-brand-navy leading-tight tracking-wide">
+            Walter Leppert
+          </span>
+          <span class="text-xs text-brand-bronze font-medium uppercase tracking-wider">
+            Gottlieb-Daimler-Führungen
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center space-x-7 text-sm font-medium text-stone-700">
+        <a href="#start" class="hover:text-brand-bronze transition-colors">Start</a>
+        <a href="#ueber-mich" class="hover:text-brand-bronze transition-colors">Über Walter</a>
+        <a href="#die-fuehrung" class="hover:text-brand-bronze transition-colors">Die Führung</a>
+        <a href="#galerie" class="hover:text-brand-bronze transition-colors">Galerie</a>
+        <a href="#gaestebuch" class="hover:text-brand-bronze transition-colors">Gästebuch</a>
+        <a href="#kontakt" class="hover:text-brand-bronze transition-colors">Kontakt</a>
+      </nav>
+
+      <!-- CTA Button Navbar -->
+      <div class="hidden sm:block">
+        <a href="https://www.schorndorf.de/de/freizeit-tourismus/fuehrungen-erlebnisse/stadtfuehrungen/auf-den-spuren-von-gottlieb-daimler" 
+           target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 bg-brand-bronze hover:bg-brand-bronzeHover text-white px-4 py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all shadow-sm bronze-glow">
+          <span>Tour buchen</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button id="mobileMenuBtn" class="md:hidden p-2 text-stone-700 hover:text-brand-navy focus:outline-none" aria-label="Menü öffnen">
+        <svg id="menuIconOpen" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+        <svg id="menuIconClose" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-stone-200 px-4 pt-2 pb-6 space-y-3">
+      <a href="#start" class="block py-2 text-base font-medium text-stone-800 hover:text-brand-bronze mobile-nav-link">Start</a>
+      <a href="#ueber-mich" class="block py-2 text-base font-medium text-stone-800 hover:text-brand-bronze mobile-nav-link">Über Walter</a>
+      <a href="#die-fuehrung" class="block py-2 text-base font-medium text-stone-800 hover:text-brand-bronze mobile-nav-link">Die Führung</a>
+      <a href="#galerie" class="block py-2 text-base font-medium text-stone-800 hover:text-brand-bronze mobile-nav-link">Galerie</a>
+      <a href="#gaestebuch" class="block py-2 text-base font-medium text-stone-800 hover:text-brand-bronze mobile-nav-link">Gästebuch</a>
+      <a href="#kontakt" class="block py-2 text-base font-medium text-stone-800 hover:text-brand-bronze mobile-nav-link">Kontakt</a>
+      <div class="pt-2">
+        <a href="https://www.schorndorf.de/de/freizeit-tourismus/fuehrungen-erlebnisse/stadtfuehrungen/auf-den-spuren-von-gottlieb-daimler" 
+           target="_blank" rel="noopener noreferrer"
+           class="w-full text-center block bg-brand-bronze text-white py-3 rounded-xl font-medium shadow-sm">
+          Führung bei Stadt Schorndorf buchen
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO BEREICH -->
+  <section id="start" class="relative overflow-hidden pt-12 pb-20 lg:py-24 bg-gradient-to-b from-brand-sand/50 via-brand-cream to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Text & Intro -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100/80 text-brand-bronze text-xs font-semibold uppercase tracking-wider border border-amber-200">
+            <span class="w-2 h-2 rounded-full bg-brand-bronze animate-pulse"></span>
+            Schorndorfer Original & Stadtgeschichte
+          </div>
+          
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl text-brand-navy font-bold leading-[1.15] tracking-tight">
+            Auf den Spuren von <span class="text-brand-bronze italic font-serif">Gottlieb Daimler</span>
+          </h1>
+
+          <p class="text-lg sm:text-xl text-stone-600 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            Begleiten Sie Walter Leppert im stilechten historischen Gehrock durch die malerischen Gassen von Schorndorf. Erleben Sie den berühmtesten Sohn der Stadt, seine Visionen und bahnbrechenden Erfindungen so lebendig wie nie zuvor.
+          </p>
+
+          <!-- Aktions-Buttons -->
+          <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            <a href="https://www.schorndorf.de/de/freizeit-tourismus/fuehrungen-erlebnisse/stadtfuehrungen/auf-den-spuren-von-gottlieb-daimler" 
+               target="_blank" rel="noopener noreferrer"
+               class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-brand-navy hover:bg-slate-800 text-white px-7 py-4 rounded-xl font-semibold transition-all shadow-md hover:-translate-y-0.5">
+              <span>Führung buchen</span>
+              <svg class="w-4 h-4 text-brand-bronze" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </a>
+
+            <a href="#ueber-mich" 
+               class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-stone-50 text-stone-800 px-6 py-4 rounded-xl font-medium border border-stone-300 transition-all">
+              <span>Über Walter Leppert</span>
+            </a>
+          </div>
+
+          <!-- Hinweis-Plakette -->
+          <div class="pt-3 flex items-center justify-center lg:justify-start gap-2 text-xs text-stone-500">
+            <svg class="w-4 h-4 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <span>Zertifizierter Schorndorfer Stadtführer &bull; Beliebt bei Reisegruppen & Schulen</span>
+          </div>
+        </div>
+
+        <!-- Bildbereich Hero -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative w-full max-w-md">
+            <!-- Deko Hintergrund -->
+            <div class="absolute -top-4 -left-4 w-72 h-72 bg-amber-200/40 rounded-3xl filter blur-2xl -z-10"></div>
+            <div class="absolute -bottom-4 -right-4 w-72 h-72 bg-slate-300/40 rounded-3xl filter blur-2xl -z-10"></div>
+
+            <div class="relative bg-white p-3 rounded-3xl card-shadow border border-stone-200/80 group">
+              <div class="overflow-hidden rounded-2xl aspect-[4/5] bg-stone-100 relative">
+                <!-- Eingebundenes Bild des Nutzers -->
+                <img src="waltertimage.jpg" 
+                     alt="Walter Leppert vor dem Gottlieb-Daimler-Denkmal in Schorndorf" 
+                     class="w-full h-full object-cover object-top transition duration-700 group-hover:scale-105"
+                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1000&q=80';">
+                
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80"></div>
+                
+                <!-- Badge auf dem Bild -->
+                <div class="absolute bottom-4 left-4 right-4 text-white p-3 rounded-xl backdrop-blur-md bg-white/10 border border-white/20">
+                  <p class="font-serif font-bold text-lg leading-tight">Walter Leppert</p>
+                  <p class="text-xs text-amber-200">Stadtführer im Gewand von Gottlieb Daimler</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ÜBER MICH SECTION -->
+  <section id="ueber-mich" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+        
+        <!-- Bild / Badge Linke Spalte -->
+        <div class="md:col-span-5">
+          <div class="relative">
+            <div class="rounded-2xl overflow-hidden card-shadow border border-stone-200">
+              <img src="waltertimage.jpg" 
+                   alt="Walter Leppert Porträt" 
+                   class="w-full h-auto object-cover"
+                   onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80';">
+            </div>
+            <!-- Historisches Zitat Kasten -->
+            <div class="absolute -bottom-6 -right-4 sm:right-6 bg-brand-cream border border-brand-bronze/40 p-4 rounded-xl shadow-lg max-w-xs">
+              <p class="font-serif italic text-brand-navy text-sm">
+                „Das Beste oder nichts – Schorndorf hat den Erfindergeist im Herzen.“
+              </p>
+              <p class="text-xs font-semibold text-brand-bronze mt-1 text-right">— Im Geiste Daimlers</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text Rechte Spalte -->
+        <div class="md:col-span-7 space-y-6 pt-6 md:pt-0">
+          <div class="space-y-2">
+            <span class="text-brand-bronze text-sm font-semibold uppercase tracking-wider">Leidenschaft & Tradition</span>
+            <h2 class="font-serif text-3xl sm:text-4xl text-brand-navy font-bold">
+              Geschichte, die berührt und begeistert
+            </h2>
+          </div>
+
+          <p class="text-stone-600 leading-relaxed">
+            Schorndorf im Remstal ist mehr als eine idyllische Fachwerkstadt – es ist die Wiege der modernen Mobilität. Hier erblickte am 17. März 1834 mit <strong>Gottlieb Daimler</strong> einer der genialsten Ingenieure und Pioniere der Weltgeschichte das Licht der Welt.
+          </p>
+
+          <p class="text-stone-600 leading-relaxed">
+            Als langjähriger Schorndorfer Stadtführer liegt es <strong>Walter Leppert</strong> am Herzen, diese faszinierende Epoche nicht als trockene Jahreszahlen, sondern als greifbares Erlebnis zu vermitteln. Im originalgetreuen Gehrock mit Fliege, Gehstock und historischer Kopfbedeckung schlüpft er in die Aura der Gründerzeit.
+          </p>
+
+          <!-- 3 Eckpfeiler Feature Liste -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+            <div class="p-4 bg-brand-cream/80 rounded-xl border border-stone-200/70">
+              <div class="w-8 h-8 rounded-lg bg-amber-100 flex items-center justify-center text-brand-bronze font-bold text-sm mb-2">
+                01
+              </div>
+              <h3 class="font-bold text-sm text-brand-navy mb-1">Authentisch</h3>
+              <p class="text-xs text-stone-500">Im stilechten Gehrock des 19. Jahrhunderts.</p>
+            </div>
+
+            <div class="p-4 bg-brand-cream/80 rounded-xl border border-stone-200/70">
+              <div class="w-8 h-8 rounded-lg bg-amber-100 flex items-center justify-center text-brand-bronze font-bold text-sm mb-2">
+                02
+              </div>
+              <h3 class="font-bold text-sm text-brand-navy mb-1">Anekdotenreich</h3>
+              <p class="text-xs text-stone-500">Spannende Hintergrundgeschichten & schwäbischer Witz.</p>
+            </div>
+
+            <div class="p-4 bg-brand-cream/80 rounded-xl border border-stone-200/70">
+              <div class="w-8 h-8 rounded-lg bg-amber-100 flex items-center justify-center text-brand-bronze font-bold text-sm mb-2">
+                03
+              </div>
+              <h3 class="font-bold text-sm text-brand-navy mb-1">Für Jedermann</h3>
+              <p class="text-xs text-stone-500">Von Schulklassen bis zu Firmen- und Seniorengruppen.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DIE FÜHRUNG DETAIL-BEREICH -->
+  <section id="die-fuehrung" class="py-20 bg-brand-sand/30 border-y border-stone-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <span class="text-brand-bronze text-sm font-semibold uppercase tracking-wider">Das Programm</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-brand-navy font-bold">
+          „Auf den Spuren von Gottlieb Daimler“
+        </h2>
+        <p class="text-stone-600">
+          Ein Rundgang durch die historische Altstadt Schorndorfs zu den wichtigsten Stationen aus Daimlers Kindheit und Werdegang.
+        </p>
+      </div>
+
+      <!-- Stationen Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        
+        <!-- Station 1 -->
+        <div class="bg-white p-6 rounded-2xl card-shadow border border-stone-200 hover:-translate-y-1 transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 bg-amber-100 text-brand-bronze rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+              </svg>
+            </div>
+            <span class="text-xs font-semibold uppercase text-brand-bronze">Station 1</span>
+            <h3 class="font-serif font-bold text-xl text-brand-navy mt-1 mb-2">Daimler Geburtshaus</h3>
+            <p class="text-xs text-stone-600 leading-relaxed">
+              In der Höllgasse 25 erblickte der Bäckersohn das Licht der Welt. Heute beherbergt das Fachwerkhaus ein Museum der Mercedes-Benz AG.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-stone-100 text-xs font-medium text-stone-500">
+            Höllgasse, Schorndorf
+          </div>
+        </div>
+
+        <!-- Station 2 -->
+        <div class="bg-white p-6 rounded-2xl card-shadow border border-stone-200 hover:-translate-y-1 transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 bg-amber-100 text-brand-bronze rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+              </svg>
+            </div>
+            <span class="text-xs font-semibold uppercase text-brand-bronze">Station 2</span>
+            <h3 class="font-serif font-bold text-xl text-brand-navy mt-1 mb-2">Historischer Marktplatz</h3>
+            <p class="text-xs text-stone-600 leading-relaxed">
+              Prächtiges Fachwerkensemble, das Rathaus und der Schorndorfer Markt, auf dem Gottlieb Daimlers Familie fest verwurzelt war.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-stone-100 text-xs font-medium text-stone-500">
+            Marktplatz & Rathaus
+          </div>
+        </div>
+
+        <!-- Station 3 -->
+        <div class="bg-white p-6 rounded-2xl card-shadow border border-stone-200 hover:-translate-y-1 transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 bg-amber-100 text-brand-bronze rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+              </svg>
+            </div>
+            <span class="text-xs font-semibold uppercase text-brand-bronze">Station 3</span>
+            <h3 class="font-serif font-bold text-xl text-brand-navy mt-1 mb-2">Daimler-Denkmal</h3>
+            <p class="text-xs text-stone-600 leading-relaxed">
+              Das imposante Bronzedenkmal vor dem Rathaus ehrt den Schöpfer des leichten, schnelllaufenden Benzinmotors.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-stone-100 text-xs font-medium text-stone-500">
+            Rathausvorplatz
+          </div>
+        </div>
+
+        <!-- Station 4 -->
+        <div class="bg-white p-6 rounded-2xl card-shadow border border-stone-200 hover:-translate-y-1 transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 bg-amber-100 text-brand-bronze rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <span class="text-xs font-semibold uppercase text-brand-bronze">Station 4</span>
+            <h3 class="font-serif font-bold text-xl text-brand-navy mt-1 mb-2">Lateinschule & Kirche</h3>
+            <p class="text-xs text-stone-600 leading-relaxed">
+              Erfahren Sie, wie der junge Gottlieb in Schorndorf zeichnen lernte und den Grundstein für sein Ingenieursstudium legte.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-stone-100 text-xs font-medium text-stone-500">
+            Kirchplatz Schorndorf
+          </div>
+        </div>
+
+      </div>
+
+      <!-- WICHTIGER BUCHUNGSKASTEN (HIGHLIGHT) -->
+      <div class="bg-white rounded-3xl p-8 sm:p-10 border-2 border-brand-bronze/40 card-shadow relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-amber-100/50 rounded-bl-full -z-0"></div>
+        
+        <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-8 space-y-4">
+            <div class="inline-flex items-center gap-2 text-brand-bronze font-bold text-xs uppercase tracking-wider bg-amber-50 px-3 py-1 rounded-full">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+              </svg>
+              Zentraler Buchungsservice der Stadt Schorndorf
+            </div>
+
+            <h3 class="font-serif text-2xl sm:text-3xl text-brand-navy font-bold">
+              Wie können Sie diese Führung buchen?
+            </h3>
+
+            <p class="text-stone-600 text-sm sm:text-base leading-relaxed">
+              Bitte beachten Sie: Eine direkte verbindliche Buchung von Terminen ist auf dieser privaten Informationsseite nicht möglich. Sämtliche Buchungen, Terminabsprachen für Gruppen oder Einzeltickets werden offiziell über das <strong>Tourismus- und Stadtmarketing der Stadt Schorndorf</strong> koordiniert.
+            </p>
+
+            <!-- Kurzinfos -->
+            <div class="flex flex-wrap gap-4 pt-2 text-xs font-medium text-stone-700">
+              <span class="flex items-center gap-1.5 bg-stone-100 px-3 py-1.5 rounded-lg">
+                ⏱ Dauer: ca. 1,5 – 2 Stunden
+              </span>
+              <span class="flex items-center gap-1.5 bg-stone-100 px-3 py-1.5 rounded-lg">
+                📍 Treffpunkt: Schorndorfer Innenstadt
+              </span>
+              <span class="flex items-center gap-1.5 bg-stone-100 px-3 py-1.5 rounded-lg">
+                👥 Gruppen & Individualgäste
+              </span>
+            </div>
+          </div>
+
+          <div class="lg:col-span-4 flex flex-col items-center lg:items-end justify-center gap-3">
+            <a href="https://www.schorndorf.de/de/freizeit-tourismus/fuehrungen-erlebnisse/stadtfuehrungen/auf-den-spuren-von-gottlieb-daimler" 
+               target="_blank" rel="noopener noreferrer"
+               class="w-full text-center bg-brand-bronze hover:bg-brand-bronzeHover text-white font-semibold py-4 px-6 rounded-2xl shadow-md transition-all hover:scale-[1.02] flex items-center justify-center gap-2">
+              <span>Jetzt bei Schorndorf.de buchen</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+              </svg>
+            </a>
+            <span class="text-[11px] text-stone-500 text-center">
+              Offizielle Website der Stadt Schorndorf (Tourismusportal)
+            </span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GALERIE SECTION -->
+  <section id="galerie" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-2">
+        <span class="text-brand-bronze text-sm font-semibold uppercase tracking-wider">Impressionen</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-brand-navy font-bold">
+          Bildergalerie
+        </h2>
+        <p class="text-stone-600">
+          Ein visueller Vorgeschmack auf Schorndorfs Fachwerkflair und die Führungen mit Walter Leppert.
+        </p>
+      </div>
+
+      <!-- Galerie Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Bild 1: Walter Leppert Originalfoto -->
+        <div class="group relative overflow-hidden rounded-2xl aspect-[4/3] bg-stone-100 card-shadow cursor-pointer" onclick="openLightbox('waltertimage.jpg', 'Walter Leppert als Gottlieb Daimler vor dem Denkmal')">
+          <img src="waltertimage.jpg" 
+               alt="Walter Leppert vor dem Gottlieb-Daimler-Denkmal" 
+               class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+               onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80';">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+            <span class="text-white text-sm font-medium">Walter Leppert vor dem Daimler-Denkmal &bull; Klick für Großansicht</span>
+          </div>
+        </div>
+
+        <!-- Bild 2: Historisches Fachwerk Schorndorf -->
+        <div class="group relative overflow-hidden rounded-2xl aspect-[4/3] bg-stone-100 card-shadow cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80', 'Malerische Fachwerkgassen in Schorndorf')">
+          <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" 
+               alt="Fachwerkhäuser Schorndorf" 
+               class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+            <span class="text-white text-sm font-medium">Historische Fachwerkkulisse Schorndorf</span>
+          </div>
+        </div>
+
+        <!-- Bild 3: Daimler Geburtshaus / Höllgasse Symbolik -->
+        <div class="group relative overflow-hidden rounded-2xl aspect-[4/3] bg-stone-100 card-shadow cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=1200&q=80', 'Gottlieb Daimlers Geburtshaus in der Höllgasse')">
+          <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=800&q=80" 
+               alt="Historisches Bauwerk Remstal" 
+               class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+            <span class="text-white text-sm font-medium">Höllgasse: Geburtshaus Gottlieb Daimlers</span>
+          </div>
+        </div>
+
+        <!-- Bild 4: Technik & Pioniere -->
+        <div class="group relative overflow-hidden rounded-2xl aspect-[4/3] bg-stone-100 card-shadow cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1200&q=80', 'Die Anfänge der Mobilität – Erfindergeist')">
+          <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=800&q=80" 
+               alt="Historische Motoren & Mobilität" 
+               class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+            <span class="text-white text-sm font-medium">Pioniergeist: Der erste Schnellläufer-Motor</span>
+          </div>
+        </div>
+
+        <!-- Bild 5: Schorndorfer Marktplatzbrunnen -->
+        <div class="group relative overflow-hidden rounded-2xl aspect-[4/3] bg-stone-100 card-shadow cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=1200&q=80', 'Historischer Stadtkern & Flair')">
+          <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=800&q=80" 
+               alt="Historische Stadtansicht" 
+               class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+            <span class="text-white text-sm font-medium">Marktplatz & Flair im Remstal</span>
+          </div>
+        </div>
+
+        <!-- Bild 6: Detailansicht Walter Leppert im Gehrock -->
+        <div class="group relative overflow-hidden rounded-2xl aspect-[4/3] bg-stone-100 card-shadow cursor-pointer" onclick="openLightbox('waltertimage.jpg', 'Walter Leppert mit Zylinder & Regenschirm')">
+          <img src="waltertimage.jpg" 
+               alt="Walter Leppert Schorndorf" 
+               class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500"
+               onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80';">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+            <span class="text-white text-sm font-medium">Stilecht im 1890er Look: Walter Leppert</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX MODAL -->
+  <div id="lightboxModal" class="fixed inset-0 z-50 bg-black/90 hidden items-center justify-center p-4" onclick="closeLightbox()">
+    <div class="relative max-w-4xl w-full flex flex-col items-center" onclick="event.stopPropagation()">
+      <button onclick="closeLightbox()" class="absolute -top-12 right-0 text-white hover:text-amber-400 p-2 text-2xl" aria-label="Schließen">
+        &times;
+      </button>
+      <img id="lightboxImg" src="" alt="Großansicht" class="max-h-[80vh] w-auto rounded-lg object-contain shadow-2xl">
+      <p id="lightboxCaption" class="text-stone-300 text-sm mt-3 text-center"></p>
+    </div>
+  </div>
+
+  <!-- GÄSTEBUCH SECTION -->
+  <section id="gaestebuch" class="py-20 bg-brand-cream border-t border-stone-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-2">
+        <span class="text-brand-bronze text-sm font-semibold uppercase tracking-wider">Erfahrungen & Stimmen</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-brand-navy font-bold">
+          Gästebuch
+        </h2>
+        <p class="text-stone-600">
+          Haben Sie an einer Stadtführung teilgenommen? Hinterlassen Sie Walter Leppert Ihren Gruß oder ein kurzes Feedback!
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        
+        <!-- Formular zum Eintragen -->
+        <div class="lg:col-span-5">
+          <div class="bg-white p-6 sm:p-8 rounded-2xl card-shadow border border-stone-200">
+            <h3 class="font-serif font-bold text-xl text-brand-navy mb-2">Eintrag verfassen</h3>
+            <p class="text-xs text-stone-500 mb-6">
+              Ihr Eintrag erscheint sofort auf dieser Seite und wird automatisch per E-Mail an Walter Leppert übermittelt.
+            </p>
+
+            <form id="guestbookForm" class="space-y-4">
+              <div>
+                <label for="gbName" class="block text-xs font-semibold text-stone-700 uppercase tracking-wider mb-1">Ihr Name *</label>
+                <input type="text" id="gbName" required 
+                       class="w-full px-4 py-2.5 rounded-xl border border-stone-300 focus:border-brand-bronze focus:ring-1 focus:ring-brand-bronze outline-none text-sm transition"
+                       placeholder="z. B. Familie Schneider">
+              </div>
+
+              <div>
+                <label for="gbLocation" class="block text-xs font-semibold text-stone-700 uppercase tracking-wider mb-1">Herkunft / Gruppe</label>
+                <input type="text" id="gbLocation" 
+                       class="w-full px-4 py-2.5 rounded-xl border border-stone-300 focus:border-brand-bronze focus:ring-1 focus:ring-brand-bronze outline-none text-sm transition"
+                       placeholder="z. B. Stuttgart oder Oldtimerclub Remstal">
+              </div>
+
+              <div>
+                <label for="gbRating" class="block text-xs font-semibold text-stone-700 uppercase tracking-wider mb-1">Bewertung</label>
+                <select id="gbRating" class="w-full px-4 py-2.5 rounded-xl border border-stone-300 focus:border-brand-bronze focus:ring-1 focus:ring-brand-bronze outline-none text-sm bg-white">
+                  <option value="5">⭐⭐⭐⭐⭐ (5 von 5 Sternen - Begeisternd!)</option>
+                  <option value="4">⭐⭐⭐⭐ (4 von 5 Sternen - Sehr gut)</option>
+                  <option value="3">⭐⭐⭐ (3 von 5 Sternen - Gut)</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="gbMessage" class="block text-xs font-semibold text-stone-700 uppercase tracking-wider mb-1">Ihre Nachricht *</label>
+                <textarea id="gbMessage" rows="4" required 
+                          class="w-full px-4 py-2.5 rounded-xl border border-stone-300 focus:border-brand-bronze focus:ring-1 focus:ring-brand-bronze outline-none text-sm transition"
+                          placeholder="Wie hat Ihnen die Führung mit Walter Leppert gefallen?"></textarea>
+              </div>
+
+              <button type="submit" 
+                      class="w-full bg-brand-bronze hover:bg-brand-bronzeHover text-white py-3 px-6 rounded-xl font-medium text-sm transition shadow-sm hover:shadow flex items-center justify-center gap-2">
+                <span>Eintrag veröffentlichen & absenden</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Gästebucheinträge Liste -->
+        <div class="lg:col-span-7">
+          <div class="space-y-4" id="guestbookList">
+            <!-- Dynamisch via JavaScript befüllt -->
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- KONTAKT SECTION -->
+  <section id="kontakt" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Kontaktdaten Spalte -->
+        <div class="lg:col-span-5 space-y-6">
+          <div>
+            <span class="text-brand-bronze text-sm font-semibold uppercase tracking-wider">Persönlicher Kontakt</span>
+            <h2 class="font-serif text-3xl text-brand-navy font-bold mt-1">
+              Walter Leppert kontaktieren
+            </h2>
+          </div>
+
+          <p class="text-stone-600 text-sm leading-relaxed">
+            Haben Sie spezielle Fragen zur Person Gottlieb Daimler, persönliche Anliegen an Walter Leppert oder möchten Sie Feedback geben? Nutzen Sie gerne die direkte E-Mail-Adresse.
+          </p>
+
+          <div class="space-y-4 pt-2">
+            <!-- Mail -->
+            <div class="flex items-start gap-4 p-4 rounded-xl bg-brand-cream border border-stone-200">
+              <div class="w-10 h-10 rounded-lg bg-amber-100 text-brand-bronze flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="text-xs text-stone-500 uppercase font-semibold">Direkte E-Mail an Walter Leppert</p>
+                <a href="mailto:walter.leppert@aol.com" class="text-brand-navy font-semibold hover:text-brand-bronze transition">
+                  walter.leppert@aol.com
+                </a>
+              </div>
+            </div>
+
+            <!-- Stadt Schorndorf Info -->
+            <div class="flex items-start gap-4 p-4 rounded-xl bg-slate-50 border border-stone-200">
+              <div class="w-10 h-10 rounded-lg bg-slate-200 text-brand-navy flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="text-xs text-stone-500 uppercase font-semibold">Für Terminvereinbarungen & Tickets</p>
+                <p class="text-xs text-stone-700 mt-0.5">Stadt Schorndorf – Tourist Information</p>
+                <a href="https://www.schorndorf.de/de/freizeit-tourismus/fuehrungen-erlebnisse/stadtfuehrungen/auf-den-spuren-von-gottlieb-daimler" 
+                   target="_blank" rel="noopener noreferrer" 
+                   class="text-xs text-brand-bronze font-semibold hover:underline block mt-1">
+                  Offizielle Buchungswebsite aufrufen &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Direktes Kontaktformular -->
+        <div class="lg:col-span-7">
+          <div class="bg-brand-cream p-6 sm:p-8 rounded-2xl border border-stone-200">
+            <h3 class="font-serif font-bold text-xl text-brand-navy mb-4">Nachricht an Walter senden</h3>
+            <form id="contactForm" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="cName" class="block text-xs font-semibold text-stone-700 uppercase mb-1">Ihr Name *</label>
+                  <input type="text" id="cName" required class="w-full px-4 py-2.5 rounded-xl border border-stone-300 bg-white focus:ring-1 focus:ring-brand-bronze outline-none text-sm">
+                </div>
+                <div>
+                  <label for="cEmail" class="block text-xs font-semibold text-stone-700 uppercase mb-1">Ihre E-Mail *</label>
+                  <input type="email" id="cEmail" required class="w-full px-4 py-2.5 rounded-xl border border-stone-300 bg-white focus:ring-1 focus:ring-brand-bronze outline-none text-sm">
+                </div>
+              </div>
+
+              <div>
+                <label for="cSubject" class="block text-xs font-semibold text-stone-700 uppercase mb-1">Betreff</label>
+                <input type="text" id="cSubject" value="Anfrage / Gruß an Walter Leppert" class="w-full px-4 py-2.5 rounded-xl border border-stone-300 bg-white focus:ring-1 focus:ring-brand-bronze outline-none text-sm">
+              </div>
+
+              <div>
+                <label for="cMessage" class="block text-xs font-semibold text-stone-700 uppercase mb-1">Ihre Nachricht *</label>
+                <textarea id="cMessage" rows="4" required class="w-full px-4 py-2.5 rounded-xl border border-stone-300 bg-white focus:ring-1 focus:ring-brand-bronze outline-none text-sm" placeholder="Schreiben Sie hier Ihre Nachricht..."></textarea>
+              </div>
+
+              <div class="flex items-start gap-2 pt-1">
+                <input type="checkbox" id="cData" required class="mt-1 rounded text-brand-bronze focus:ring-brand-bronze">
+                <label for="cData" class="text-xs text-stone-600">
+                  Ich bin damit einverstanden, dass meine Angaben zur Kontaktaufnahme verwendet werden.
+                </label>
+              </div>
+
+              <button type="submit" class="w-full bg-brand-navy hover:bg-slate-800 text-white font-semibold py-3.5 px-6 rounded-xl transition text-sm flex items-center justify-center gap-2">
+                <span>E-Mail an walter.leppert@aol.com absenden</span>
+                <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-dark text-stone-300 py-12 border-t border-stone-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        
+        <div class="md:col-span-2 space-y-3">
+          <div class="font-serif font-bold text-2xl text-white">Walter Leppert</div>
+          <p class="text-xs text-stone-400 max-w-sm">
+            Stadtführungen in historischer Gewandung auf den Spuren von Gottlieb Daimler in Schorndorf (Rems-Murr-Kreis).
+          </p>
+          <div class="text-xs text-brand-bronze">
+            E-Mail: <a href="mailto:walter.leppert@aol.com" class="hover:underline">walter.leppert@aol.com</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-white font-semibold text-sm mb-3">Navigation</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#start" class="hover:text-amber-400 transition">Startseite</a></li>
+            <li><a href="#ueber-mich" class="hover:text-amber-400 transition">Über Walter Leppert</a></li>
+            <li><a href="#die-fuehrung" class="hover:text-amber-400 transition">Die Stadtführung</a></li>
+            <li><a href="#galerie" class="hover:text-amber-400 transition">Galerie & Impressionen</a></li>
+            <li><a href="#gaestebuch" class="hover:text-amber-400 transition">Gästebuch</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-semibold text-sm mb-3">Rechtliches</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="javascript:void(0)" onclick="openModal('impressumModal')" class="hover:text-amber-400 transition">Impressum</a></li>
+            <li><a href="javascript:void(0)" onclick="openModal('datenschutzModal')" class="hover:text-amber-400 transition">Datenschutz</a></li>
+            <li>
+              <a href="https://www.schorndorf.de/de/freizeit-tourismus/fuehrungen-erlebnisse/stadtfuehrungen/auf-den-spuren-von-gottlieb-daimler" 
+                 target="_blank" rel="noopener noreferrer" 
+                 class="text-amber-400 hover:underline">
+                Buchung Stadt Schorndorf &nearr;
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-stone-800 text-center text-xs text-stone-500">
+        &copy; <span id="currentYear"></span> Walter Leppert &bull; Stadtführer Schorndorf. Alle Rechte vorbehalten.
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL: IMPRESSUM -->
+  <div id="impressumModal" class="fixed inset-0 z-50 bg-black/70 hidden items-center justify-center p-4">
+    <div class="bg-white max-w-xl w-full rounded-2xl p-6 max-h-[85vh] overflow-y-auto space-y-4">
+      <div class="flex justify-between items-center border-b pb-3">
+        <h3 class="font-serif font-bold text-xl text-brand-navy">Impressum</h3>
+        <button onclick="closeModal('impressumModal')" class="text-2xl text-stone-400 hover:text-stone-800">&times;</button>
+      </div>
+      <div class="text-xs text-stone-600 space-y-3 leading-relaxed">
+        <p><strong>Angaben gemäß § 5 TMG:</strong></p>
+        <p>
+          Walter Leppert<br>
+          Stadtführer Schorndorf<br>
+          E-Mail: walter.leppert@aol.com
+        </p>
+        <p><strong>Hinweis zu Führungsbuchungen:</strong><br>
+        Diese Internetpräsenz dient ausschließlich der persönlichen Information und Vorstellung von Walter Leppert. Sämtliche Buchungsverträge und Termine für Stadtführungen werden unmittelbar über den Tourismusservice der Stadt Schorndorf abgewickelt.</p>
+        <p><strong>Haftung für Inhalte und Links:</strong><br>
+        Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte verantwortlich. Für externe Links Dritter übernehmen wir keine Gewähr.</p>
+      </div>
+      <div class="text-right pt-3">
+        <button onclick="closeModal('impressumModal')" class="bg-stone-200 hover:bg-stone-300 text-stone-800 text-xs px-4 py-2 rounded-lg font-medium">Schließen</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: DATENSCHUTZ -->
+  <div id="datenschutzModal" class="fixed inset-0 z-50 bg-black/70 hidden items-center justify-center p-4">
+    <div class="bg-white max-w-xl w-full rounded-2xl p-6 max-h-[85vh] overflow-y-auto space-y-4">
+      <div class="flex justify-between items-center border-b pb-3">
+        <h3 class="font-serif font-bold text-xl text-brand-navy">Datenschutzerklärung</h3>
+        <button onclick="closeModal('datenschutzModal')" class="text-2xl text-stone-400 hover:text-stone-800">&times;</button>
+      </div>
+      <div class="text-xs text-stone-600 space-y-3 leading-relaxed">
+        <p><strong>1. Datenschutz auf einen Blick</strong><br>
+        Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Beim Besuch dieser Seite werden keine Tracking-Cookies von Werbenetzwerken gesetzt.</p>
+        <p><strong>2. Kontaktaufnahme & Gästebuch</strong><br>
+        Wenn Sie uns über das Kontaktformular oder Gästebuch schreiben, werden die von Ihnen eingegebenen Daten lokal verarbeitet und zur Beantwortung bzw. Anzeige gespeichert. Sie können jederzeit die Löschung verlangen.</p>
+        <p><strong>3. Hosting über GitHub Pages</strong><br>
+        Diese Website wird auf Servern von GitHub Inc. (USA) gehostet. Beim Abruf können standardmäßig Server-Logfiles verarbeitet werden.</p>
+      </div>
+      <div class="text-right pt-3">
+        <button onclick="closeModal('datenschutzModal')" class="bg-stone-200 hover:bg-stone-300 text-stone-800 text-xs px-4 py-2 rounded-lg font-medium">Schließen</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST BENACHRICHTIGUNG -->
+  <div id="toastNotification" class="fixed bottom-6 right-6 z-50 bg-brand-navy text-white px-5 py-3 rounded-xl shadow-2xl border border-brand-bronze text-sm flex items-center gap-3 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
+    <span id="toastIcon">✅</span>
+    <span id="toastMsg">Mitteilung</span>
+  </div>
+
+  <!-- JAVASCRIPT LOGIK -->
+  <script>
+    // Aktuelles Jahr im Footer
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // Mobile Menü Handhabung
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIconOpen = document.getElementById('menuIconOpen');
+    const menuIconClose = document.getElementById('menuIconClose');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      if (isHidden) {
+        mobileMenu.classList.remove('hidden');
+        menuIconOpen.classList.add('hidden');
+        menuIconClose.classList.remove('hidden');
+      } else {
+        mobileMenu.classList.add('hidden');
+        menuIconOpen.classList.remove('hidden');
+        menuIconClose.classList.add('hidden');
+      }
+    });
+
+    // Menü schließen beim Klick auf einen Nav-Link
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIconOpen.classList.remove('hidden');
+        menuIconClose.classList.add('hidden');
+      });
+    });
+
+    // Toast Benachrichtigung anzeigen
+    function showToast(message, icon = '✅') {
+      const toast = document.getElementById('toastNotification');
+      document.getElementById('toastMsg').textContent = message;
+      document.getElementById('toastIcon').textContent = icon;
+      toast.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+      setTimeout(() => {
+        toast.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+      }, 4000);
+    }
+
+    // Lightbox Handhabung
+    function openLightbox(src, caption) {
+      const modal = document.getElementById('lightboxModal');
+      const img = document.getElementById('lightboxImg');
+      const cap = document.getElementById('lightboxCaption');
+      img.src = src;
+      cap.textContent = caption || '';
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightboxModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    // Modal Handhabung (Impressum & Datenschutz)
+    function openModal(id) {
+      const modal = document.getElementById(id);
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeModal(id) {
+      const modal = document.getElementById(id);
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    // GÄSTEBUCH LOGIK MIT LOCALSTORAGE + MAILTO
+    const defaultEntries = [
+      {
+        name: "Eberhard & Renate K.",
+        location: "Waiblingen",
+        rating: 5,
+        date: "14. Mai 2024",
+        message: "Eine wunderbare Stadtführung! Herr Leppert im Gehrock hat uns mit seinem Fachwissen und schwäbischen Humor absolut begeistert. Ein echtes Schorndorfer Unikat!"
+      },
+      {
+        name: "Kulturkreis Remstal e.V.",
+        location: "Schwäbisch Gmünd",
+        rating: 5,
+        date: "28. April 2024",
+        message: "Unser Vereinsausflug war dank Herrn Leppert ein voller Erfolg. Die Führung zur Höllgasse und den Motorenentwicklungen war kurzweilig und hochinteressant."
+      },
+      {
+        name: "Markus S.",
+        location: "Esslingen",
+        rating: 5,
+        date: "03. Oktober 2023",
+        message: "Daimlers Geschichte so hautnah präsentiert zu bekommen ist ein Erlebnis für Jung und Alt. Vielen Dank für diesen tollen Nachmittag!"
+      }
+    ];
+
+    function loadGuestbook() {
+      let entries = JSON.parse(localStorage.getItem('walter_guestbook_entries'));
+      if (!entries || entries.length === 0) {
+        entries = defaultEntries;
+        localStorage.setItem('walter_guestbook_entries', JSON.stringify(entries));
+      }
+      renderGuestbook(entries);
+    }
+
+    function renderGuestbook(entries) {
+      const listContainer = document.getElementById('guestbookList');
+      listContainer.innerHTML = '';
+
+      entries.forEach(item => {
+        const card = document.createElement('div');
+        card.className = "bg-white p-5 rounded-2xl card-shadow border border-stone-200/80 transition-all";
+        
+        let stars = "⭐".repeat(item.rating || 5);
+
+        card.innerHTML = `
+          <div class="flex items-start justify-between gap-2 mb-2">
+            <div>
+              <h4 class="font-bold text-brand-navy text-base">${escapeHtml(item.name)}</h4>
+              <p class="text-xs text-stone-500">${escapeHtml(item.location || 'Besucher')} &bull; ${escapeHtml(item.date)}</p>
+            </div>
+            <div class="text-sm shrink-0">${stars}</div>
+          </div>
+          <p class="text-stone-700 text-sm leading-relaxed mt-2 italic">
+            „${escapeHtml(item.message)}“
+          </p>
+        `;
+        listContainer.appendChild(card);
+      });
+    }
+
+    function escapeHtml(text) {
+      const map = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#039;'
+      };
+      return String(text).replace(/[&<>"']/g, m => map[m]);
+    }
+
+    // Gästebuch Formular Absenden
+    document.getElementById('guestbookForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('gbName').value.trim();
+      const location = document.getElementById('gbLocation').value.trim();
+      const rating = parseInt(document.getElementById('gbRating').value);
+      const message = document.getElementById('gbMessage').value.trim();
+
+      if (!name || !message) return;
+
+      const dateStr = new Date().toLocaleDateString('de-DE', { day: '2-digit', month: 'long', year: 'numeric' });
+
+      const newEntry = {
+        name: name,
+        location: location || "Besucher",
+        rating: rating,
+        date: dateStr,
+        message: message
+      };
+
+      // In LocalStorage an den Anfang schieben
+      let entries = JSON.parse(localStorage.getItem('walter_guestbook_entries')) || defaultEntries;
+      entries.unshift(newEntry);
+      localStorage.setItem('walter_guestbook_entries', JSON.stringify(entries));
+
+      renderGuestbook(entries);
+      this.reset();
+
+      // Mailto öffnen, um Walter direkt per E-Mail zu benachrichtigen
+      const subject = encodeURIComponent(`Neuer Gästebucheintrag von ${name}`);
+      const body = encodeURIComponent(
+        `Hallo Walter,\n\nes wurde ein neuer Gästebucheintrag auf Ihrer Website hinterlassen:\n\n` +
+        `Name: ${name}\n` +
+        `Herkunft: ${location}\n` +
+        `Bewertung: ${rating} von 5 Sternen\n` +
+        `Datum: ${dateStr}\n\n` +
+        `Nachricht:\n"${message}"\n\n` +
+        `Beste Grüße von Ihrer Webseite!`
+      );
+
+      showToast("Vielen Dank! Ihr Gästebucheintrag wurde gespeichert.", "✨");
+
+      // Kurze Verzögerung für angenehmen App-Ablauf
+      setTimeout(() => {
+        window.location.href = `mailto:walter.leppert@aol.com?subject=${subject}&body=${body}`;
+      }, 700);
+    });
+
+    // Kontaktformular Handhabung
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('cName').value.trim();
+      const email = document.getElementById('cEmail').value.trim();
+      const subject = document.getElementById('cSubject').value.trim() || 'Anfrage an Walter Leppert';
+      const message = document.getElementById('cMessage').value.trim();
+
+      const mailSubject = encodeURIComponent(subject);
+      const mailBody = encodeURIComponent(
+        `Hallo Walter Leppert,\n\n` +
+        `Sie haben eine Nachricht über das Kontaktformular erhalten:\n\n` +
+        `Name: ${name}\n` +
+        `E-Mail des Absenders: ${email}\n\n` +
+        `Nachricht:\n${message}\n`
+      );
+
+      showToast("E-Mail-Programm wird geöffnet...", "✉️");
+      
+      setTimeout(() => {
+        window.location.href = `mailto:walter.leppert@aol.com?subject=${mailSubject}&body=${mailBody}`;
+      }, 500);
+    });
+
+    // Initialisierung beim Laden
+    window.addEventListener('DOMContentLoaded', () => {
+      loadGuestbook();
+    });
+  </script>
+</body>
+</html>
